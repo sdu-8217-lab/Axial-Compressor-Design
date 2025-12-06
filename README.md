@@ -4,4 +4,8 @@
 <img width="441" height="373" alt="image" src="https://github.com/user-attachments/assets/364431a5-d4b4-44f9-a3a5-343259900691" />  
 <img width="888" height="544" alt="image" src="https://github.com/user-attachments/assets/1fd10cf3-b6ab-42dc-9d7e-75c05bfd117f" />  
 
-注意：本代码尚未经检验是否符合实际，且使用等绝热能量头分配法简化计算，参考文献仅《轴流压缩机原理与气动设计》
+注意：  
+1.本代码尚未其他模型或者软件检验；  
+2.本代码使用等绝热能量头分配法进行计算，属于简化计算；  
+3.本计算过程重热计算方法并未提供多变效率，因此重热系数默认使用1.05；  
+4.参考文献仅《轴流压缩机原理与气动设计》，无其他参考文献。
