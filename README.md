@@ -1,9 +1,9 @@
-# multi_stage_compressor_system
-本MATLAB工具实现了多级轴流压缩机的热力计算功能，基于《轴流压缩机原理与气动设计》的理论框架。该工具可根据用户输入的工质参数、边界条件和设计参数，计算各级压缩过程的温度、压力、速度等关键参数，并输出压缩机整体性能指标。  
-使用方法：matlab使用multi_stage_compressor_system_test作为数据输入和结果呈现  
-<img width="902" height="514" alt="image" src="https://github.com/user-attachments/assets/6f3d0558-de61-43a4-a424-bd535e4c433f" />  
+
+本代码目前包括内容：  
+1.单级轴流压缩机代码axial_compressor_design，资料来源于《轴流压缩机原理与气动设计》，进行初步验证，与ebslion试验结果对比，在低压缩比和低温度下拟合较差，高温情况下尚可，整体上不如带有级间损失的多级压缩机代码；后续可以抛开资料额外设计或者修改完善公式；  
+2.单换热器代码GasLiquidHXDesign，资料来源于网络，未进行验证，使用逆流式换热；  
+3.带有级间损失和级间换热的多级轴流式压缩机代码multi_stage_compressor_system，实现过程来源于循环调用axial_compressor_design和GasLiquidHXDesign，带有末级冷却，未进行验证；  
+4.单级离心式压缩机代码centrifugal_compressor_calculation，资料来源于网络，未进行验证；
+5.载热流体与热罐换热代码thermal_storage_simulation，资料来源于caes中的simulink模型，与simulink进行过初步验证，存在差异，但初步认为可行；  
 注意：  
-1.本代码实现是通过循环调用单级压缩机代码和换热器代码实现功能；  
-2.单级压缩机代码和ebslion仿真结果在较低温度时有较为明显的区别，预估还需进行公式改善；  
-3.后续可以嵌套其他部件，如低温罐、储气洞穴等部件；  
-4.代码构建思路与caes中simulink思路一致，但未进行对比验证。
+1.每个函数均带有一个test代码，作初步的功能验证
