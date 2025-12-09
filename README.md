@@ -3,7 +3,11 @@
 1.单级轴流压缩机代码axial_compressor_design，资料来源于《轴流压缩机原理与气动设计》，进行初步验证，与ebslion试验结果对比，在低压缩比和低温度下拟合较差，高温情况下尚可，整体上不如带有级间损失的多级压缩机代码；后续可以抛开资料额外设计或者修改完善公式；  
 2.单换热器代码GasLiquidHXDesign，资料来源于网络，未进行验证，使用逆流式换热；  
 3.带有级间损失和级间换热的多级轴流式压缩机代码multi_stage_compressor_system，实现过程来源于循环调用axial_compressor_design和GasLiquidHXDesign，带有末级冷却，未进行验证；  
-4.单级离心式压缩机代码centrifugal_compressor_calculation，资料来源于网络，未进行验证；
+4.单级离心式压缩机代码centrifugal_compressor_calculation，资料来源于网络，未进行验证；  
 5.载热流体与热罐换热代码thermal_storage_simulation，资料来源于caes中的simulink模型，与simulink进行过初步验证，存在差异，但初步认为可行；  
+6.储气罐进口温压变化代码Gas_storage_tank_input,资料来源于caes中的simulink模型，与simulink进行过初步验证，存在差异；   
+7.热罐总换热代码multistage_storage，资料来源于caes中的simulink模型，与simulink进行过初步验证，存在差异，但初步认为可行；    
+8.储气洞穴自然降温泄压代码tank_leak_sim，无参考资料，由自身设计，无法进行可行性分析，但代码不与其他内容相互作用，只作为补充部分，结合具体情况决定是否计算泄露（储气洞穴须计算，储气罐无计算必要）。    
 注意：  
-1.每个函数均带有一个test代码，作初步的功能验证
+1.每个函数均带有一个test代码，作初步的功能验证；    
+2.所有代码都未进行彻底检验，还需要改善公式或工作流程。
